@@ -171,7 +171,7 @@ void eFbLCD::getMode()
 	m_bpp = m_screeninfo.bits_per_pixel;
 }
 
-int eFbLCD::waitVSync()
+int eFbLCD::waitforVSync()
 {
 	int c = 0;
 	return ioctl(lcdfd, FBIO_WAITFORVSYNC, &c);
